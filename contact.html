@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hours & Directions | Bay Nine Auto Works</title>
+  <meta name="description" content="Find Bay Nine Auto Works at 1420 Foundry St, Riverton. Hours, directions, after-hours drop-off and contact info." />
+  <meta name="theme-color" content="#121211" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="visit">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Scroll "fuel gauge" -->
+  <div class="fuel" aria-hidden="true">
+    <span class="fuel__f">F</span>
+    <div class="fuel__track"><div class="fuel__fill"></div></div>
+    <span class="fuel__e">E</span>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav" id="top">
+    <a href="index.html" class="brand" aria-label="Bay Nine Auto Works home">
+      <svg class="brand__nut" viewBox="0 0 64 64" aria-hidden="true">
+        <polygon points="32,3 57,17.5 57,46.5 32,61 7,46.5 7,17.5" fill="none" stroke="currentColor" stroke-width="4"/>
+        <circle cx="32" cy="32" r="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3 3"/>
+        <text x="32" y="40.5" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="900" font-size="25" fill="currentColor">9</text>
+      </svg>
+      <span class="brand__word">Bay&nbsp;Nine<small>Auto Works · Est. 2004</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" aria-current="page">Visit</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="nav__phone" href="tel:+15550192844"><span class="status-dot" data-open-dot></span>(555) 019-2844</a>
+      <a class="btn btn--orange btn--sm" href="book.html">Book a bay</a>
+    </div>
+    <button class="nav__burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <div class="drawer" hidden>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html" aria-current="page">Visit</a>
+    <a href="book.html" class="drawer__book">Book a bay →</a>
+  </div>
+
+  <main id="main">
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="page-hero__num" aria-hidden="true">04</div>
+      <div class="page-hero__inner">
+        <p class="eyebrow"><span class="blink"></span> 04 / 04 · Visit</p>
+        <h1 class="hero__title page-hero__title">
+          <span class="line"><span class="word">Come find</span></span>
+          <span class="line"><span class="word accent">us.</span></span>
+        </h1>
+        <p class="page-hero__lede">Two blocks off Mill Ave, across from River Park. Big orange doors, can't miss it.</p>
+      </div>
+    </section>
+
+    <!-- ============ VISIT ============ -->
+    <section class="visit section section--dark" id="visit">
+      <div class="section__head">
+        <p class="section__num mono">§ 01</p>
+        <h2 class="section__title">Come find us</h2>
+      </div>
+      <div class="visit__grid">
+        <div class="map">
+          <svg viewBox="0 0 500 380" aria-label="Map showing Bay Nine at 1420 Foundry Street" role="img">
+            <rect width="500" height="380" class="map__bg"/>
+            <g class="map__blocks">
+              <rect x="20" y="20" width="130" height="90"/><rect x="180" y="20" width="110" height="90"/><rect x="320" y="20" width="160" height="90"/>
+              <rect x="20" y="150" width="130" height="80"/><rect x="320" y="150" width="70" height="80"/><rect x="410" y="150" width="70" height="80"/>
+              <rect x="20" y="270" width="200" height="90"/><rect x="250" y="270" width="230" height="90"/>
+            </g>
+            <rect x="180" y="150" width="110" height="80" class="map__park"/>
+            <text x="235" y="195" text-anchor="middle" class="map__label">RIVER PARK</text>
+            <g class="map__roads">
+              <line x1="0" y1="130" x2="500" y2="130"/><line x1="0" y1="250" x2="500" y2="250"/>
+              <line x1="165" y1="0" x2="165" y2="380"/><line x1="305" y1="0" x2="305" y2="380"/>
+            </g>
+            <text x="12" y="126" class="map__street">FOUNDRY ST</text>
+            <text x="12" y="246" class="map__street">MILL AVE</text>
+            <text x="300" y="370" class="map__street" transform="rotate(-90 300 370)">5TH ST</text>
+            <path class="map__route" d="M0,250 L165,250 L165,130 L360,130"/>
+            <g class="map__pin" transform="translate(360 130)">
+              <circle r="22" class="map__pulse"/>
+              <path d="M0,-4 C-14,-4 -18,-26 0,-34 C18,-26 14,-4 0,-4 Z" transform="translate(0 -6) scale(1.3)"/>
+              <circle cy="-40" r="6" class="map__pin-dot"/>
+            </g>
+            <g class="map__callout" transform="translate(388 40)">
+              <rect width="112" height="40" rx="2"/>
+              <text x="10" y="17">BAY NINE</text>
+              <text x="10" y="31" class="small">1420 Foundry St</text>
+            </g>
+          </svg>
+          <a class="map__link mono" href="https://maps.google.com/?q=1420+Foundry+St" target="_blank" rel="noopener">Open in Maps ↗</a>
+        </div>
+
+        <div class="visit__info">
+          <div class="open-badge" data-open-badge><span class="status-dot" data-open-dot></span><span data-open-text>Checking hours…</span></div>
+          <address>
+            <strong>1420 Foundry Street</strong><br/>Riverton, ST 40127
+          </address>
+          <table class="hours" data-hours>
+            <tr data-day="1"><th>Monday</th><td>7:00a – 6:00p</td></tr>
+            <tr data-day="2"><th>Tuesday</th><td>7:00a – 6:00p</td></tr>
+            <tr data-day="3"><th>Wednesday</th><td>7:00a – 6:00p</td></tr>
+            <tr data-day="4"><th>Thursday</th><td>7:00a – 6:00p</td></tr>
+            <tr data-day="5"><th>Friday</th><td>7:00a – 6:00p</td></tr>
+            <tr data-day="6"><th>Saturday</th><td>8:00a – 2:00p</td></tr>
+            <tr data-day="0"><th>Sunday</th><td>Closed</td></tr>
+          </table>
+          <div class="visit__btns">
+            <a class="btn btn--orange" href="tel:+15550192844">Call (555) 019-2844</a>
+            <a class="btn btn--ghost" href="sms:+15550192844">Text us</a>
+          </div>
+
+          <form class="quick" data-quick novalidate>
+            <p class="mono quick__label">QUICK QUESTION?</p>
+            <div class="quick__row">
+              <input name="q_contact" placeholder="Phone or email" aria-label="Phone or email" required/>
+              <input name="q_msg" placeholder="What's up with your car?" aria-label="Your question" required/>
+              <button class="btn btn--orange btn--sm" type="submit">Send</button>
+            </div>
+            <p class="quick__ok mono" data-quick-ok hidden>✓ Got it. A service advisor will reply within 1 business hour.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BEFORE YOU COME ============ -->
+    <section class="prep section section--paper">
+      <div class="section__head">
+        <p class="section__num mono">§ 02</p>
+        <h2 class="section__title">Before you roll in</h2>
+        <p class="section__note">A few things that make drop-off painless.</p>
+      </div>
+      <div class="lanes">
+        <div class="lane lane--static">
+          <span class="lane__n">A</span>
+          <h3>After-hours drop</h3>
+          <p>Use the steel key box left of Bay 1. Envelopes are inside. Write your name, number and what's going on.</p>
+        </div>
+        <div class="lane lane--static">
+          <span class="lane__n">B</span>
+          <h3>Free shuttle</h3>
+          <p>We'll drive you anywhere within 5 miles, weekdays 7:30a to 5p. Just ask at the counter.</p>
+        </div>
+        <div class="lane lane--static">
+          <span class="lane__n">C</span>
+          <h3>Loaner cars</h3>
+          <p>Free on jobs over 4 hours. Reserve one when you book. Bring your license and proof of insurance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band">
+      <p class="mono cta-band__kicker">Hear a noise? See a light?</p>
+      <h2 class="cta-band__title">Let's take a look.</h2>
+      <div class="cta-band__actions">
+        <a href="book.html" class="btn btn--orange">Book a bay <span class="btn__arrow">→</span></a>
+        <a href="tel:+15550192844" class="btn btn--ghost">Call (555) 019-2844</a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="foot__mark" aria-hidden="true">BAY NINE</div>
+    <div class="foot__grid">
+      <div>
+        <p class="mono">Bay Nine Auto Works</p>
+        <p>1420 Foundry St, Riverton<br/><a href="tel:+15550192844">(555) 019-2844</a><br/><a href="mailto:service@baynine.example">service@baynine.example</a></p>
+      </div>
+      <div>
+        <p class="mono">Certified</p>
+        <p>ASE Blue Seal Shop<br/>AAA Approved Auto Repair<br/>Hybrid / EV Level 2</p>
+      </div>
+      <div>
+        <p class="mono">Explore</p>
+        <p><a href="services.html">Services &amp; prices</a><br/><a href="book.html">Book a bay</a><br/><a href="contact.html">Hours &amp; directions</a></p>
+      </div>
+      <div>
+        <p class="mono">Fine print</p>
+        <p>© <span data-year></span> Bay Nine Auto Works.<br/>Concept site. Shop, reviews &amp; prices are illustrative.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- mobile action bar -->
+  <div class="mbar">
+    <a href="tel:+15550192844" class="mbar__call">Call</a>
+    <a href="book.html" class="mbar__book">Book a bay</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

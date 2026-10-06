@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Bay | Bay Nine Auto Works</title>
+  <meta name="description" content="Schedule service at Bay Nine Auto Works online in about a minute. Pick your time, and we'll confirm by text." />
+  <meta name="theme-color" content="#121211" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="book">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Scroll "fuel gauge" -->
+  <div class="fuel" aria-hidden="true">
+    <span class="fuel__f">F</span>
+    <div class="fuel__track"><div class="fuel__fill"></div></div>
+    <span class="fuel__e">E</span>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav" id="top">
+    <a href="index.html" class="brand" aria-label="Bay Nine Auto Works home">
+      <svg class="brand__nut" viewBox="0 0 64 64" aria-hidden="true">
+        <polygon points="32,3 57,17.5 57,46.5 32,61 7,46.5 7,17.5" fill="none" stroke="currentColor" stroke-width="4"/>
+        <circle cx="32" cy="32" r="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3 3"/>
+        <text x="32" y="40.5" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="900" font-size="25" fill="currentColor">9</text>
+      </svg>
+      <span class="brand__word">Bay&nbsp;Nine<small>Auto Works · Est. 2004</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Visit</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="nav__phone" href="tel:+15550192844"><span class="status-dot" data-open-dot></span>(555) 019-2844</a>
+      <a class="btn btn--orange btn--sm" href="book.html" aria-current="page">Book a bay</a>
+    </div>
+    <button class="nav__burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <div class="drawer" hidden>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Visit</a>
+    <a href="book.html" class="drawer__book">Book a bay →</a>
+  </div>
+
+  <main id="main">
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="page-hero__num" aria-hidden="true">03</div>
+      <div class="page-hero__inner">
+        <p class="eyebrow"><span class="blink"></span> 03 / 04 · Book</p>
+        <h1 class="hero__title page-hero__title">
+          <span class="line"><span class="word">Book a</span></span>
+          <span class="line"><span class="word accent">bay.</span></span>
+        </h1>
+        <p class="page-hero__lede">Pick a service and a time and you're done. It syncs to our shop schedule, so there's no phone tag.</p>
+        <ul class="hero__creds page-hero__creds"><li><strong>~60s</strong> to book</li><li><strong>Text</strong> confirmations</li><li><strong>Free</strong> loaners 4hr+</li></ul>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="book section section--paper" id="book">
+      <div class="section__head">
+        <p class="section__num mono">§ 01</p>
+        <h2 class="section__title">Fill out the ticket.</h2>
+        <p class="section__note">About 60 seconds. Goes straight onto our shop schedule and we'll text you to confirm. Need help today? Call <a href="tel:+15550192844">(555) 019-2844</a>.</p>
+      </div>
+
+      <div class="booking">
+        <form class="ticket" novalidate data-form>
+          <div class="ticket__progress" aria-hidden="true">
+            <span class="is-active">Vehicle</span><span>Service</span><span>Date</span><span>Contact</span>
+          </div>
+
+          <!-- STEP 1 -->
+          <fieldset class="step-pane is-active" data-step="0">
+            <legend>What are we working on?</legend>
+            <div class="row row--3">
+              <label class="field"><span>Year</span>
+                <select name="year" required data-years><option value="">Select</option></select>
+              </label>
+              <label class="field"><span>Make</span>
+                <input name="make" list="makes" placeholder="e.g. Toyota" required autocomplete="off"/>
+                <datalist id="makes">
+                  <option>Acura</option><option>Audi</option><option>BMW</option><option>Chevrolet</option><option>Dodge</option><option>Ford</option><option>GMC</option><option>Honda</option><option>Hyundai</option><option>Jeep</option><option>Kia</option><option>Lexus</option><option>Mazda</option><option>Mercedes-Benz</option><option>Nissan</option><option>Ram</option><option>Subaru</option><option>Tesla</option><option>Toyota</option><option>Volkswagen</option><option>Volvo</option>
+                </datalist>
+              </label>
+              <label class="field"><span>Model</span>
+                <input name="model" placeholder="e.g. Tacoma" required/>
+              </label>
+            </div>
+            <label class="field"><span>Approx. mileage <em class="mono" data-miles-out>60,000 mi</em></span>
+              <input type="range" name="miles" min="0" max="250000" step="5000" value="60000" data-miles/>
+            </label>
+          </fieldset>
+
+          <!-- STEP 2 -->
+          <fieldset class="step-pane" data-step="1">
+            <legend>What does it need?</legend>
+            <div class="chips" data-chips>
+              <label><input type="checkbox" name="svc" value="Oil change"/><span>Oil change</span></label>
+              <label><input type="checkbox" name="svc" value="Check-engine light"/><span>Check-engine light</span></label>
+              <label><input type="checkbox" name="svc" value="Brakes"/><span>Brakes</span></label>
+              <label><input type="checkbox" name="svc" value="Tires & alignment"/><span>Tires &amp; alignment</span></label>
+              <label><input type="checkbox" name="svc" value="A/C & heat"/><span>A/C &amp; heat</span></label>
+              <label><input type="checkbox" name="svc" value="Battery & electrical"/><span>Battery &amp; electrical</span></label>
+              <label><input type="checkbox" name="svc" value="Transmission"/><span>Transmission</span></label>
+              <label><input type="checkbox" name="svc" value="Exhaust"/><span>Exhaust</span></label>
+              <label><input type="checkbox" name="svc" value="State inspection"/><span>State inspection</span></label>
+              <label><input type="checkbox" name="svc" value="Something's off"/><span>Not sure, something's off</span></label>
+            </div>
+            <label class="field"><span>Describe it (noises, smells, when it happens)</span>
+              <textarea name="notes" rows="3" placeholder="Grinding noise from front left when braking, mostly in the morning…"></textarea>
+            </label>
+          </fieldset>
+
+          <!-- STEP 3 -->
+          <fieldset class="step-pane" data-step="2">
+            <legend>Pick a drop-off time</legend>
+            <div class="sched">
+              <div class="cal">
+                <div class="cal__head">
+                  <button type="button" class="cal__nav" data-cal-prev aria-label="Previous month">‹</button>
+                  <strong data-cal-label></strong>
+                  <button type="button" class="cal__nav" data-cal-next aria-label="Next month">›</button>
+                </div>
+                <div class="cal__dow mono"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+                <div class="cal__grid" data-cal-grid></div>
+              </div>
+              <div class="slots">
+                <p class="mono slots__label" data-slot-label>Select a date</p>
+                <div class="slots__grid" data-slots></div>
+                <div class="toggle-row">
+                  <label class="toggle"><input type="radio" name="stay" value="Waiting" /><span>I'll wait (lounge + Wi-Fi)</span></label>
+                  <label class="toggle"><input type="radio" name="stay" value="Drop-off" checked /><span>Drop-off</span></label>
+                  <label class="toggle"><input type="radio" name="stay" value="Loaner" /><span>Need a loaner</span></label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- STEP 4 -->
+          <fieldset class="step-pane" data-step="3">
+            <legend>Where do we send updates?</legend>
+            <div class="row row--2">
+              <label class="field"><span>Full name</span><input name="name" required autocomplete="name"/></label>
+              <label class="field"><span>Mobile</span><input name="phone" type="tel" required autocomplete="tel" placeholder="(555) 555-5555"/></label>
+            </div>
+            <label class="field"><span>Email <em>(optional)</em></span><input name="email" type="email" autocomplete="email"/></label>
+            <label class="check"><input type="checkbox" name="sms" checked/> <span>Text me photos, quotes &amp; status updates</span></label>
+          </fieldset>
+
+          <p class="form-error" role="alert" data-error></p>
+
+          <div class="ticket__nav">
+            <button type="button" class="btn btn--ghost-dark" data-back hidden>← Back</button>
+            <button type="button" class="btn btn--orange" data-next>Next →</button>
+            <button type="submit" class="btn btn--orange" data-submit hidden>Reserve my bay ✓</button>
+          </div>
+
+          <!-- SUCCESS -->
+          <div class="done" data-done hidden>
+            <div class="done__stamp">Scheduled</div>
+            <h3>You're on the board.</h3>
+            <p data-done-msg></p>
+            <button type="button" class="btn btn--ghost-dark" data-reset>Book another vehicle</button>
+          </div>
+        </form>
+
+        <!-- live repair order -->
+        <aside class="ro" aria-label="Repair order summary">
+          <div class="ro__head">
+            <div>
+              <p class="mono">REPAIR ORDER</p>
+              <p class="ro__num mono" data-ro-num>#—</p>
+            </div>
+            <svg viewBox="0 0 64 64" class="ro__logo" aria-hidden="true"><polygon points="32,3 57,17.5 57,46.5 32,61 7,46.5 7,17.5" fill="none" stroke="currentColor" stroke-width="4"/><text x="32" y="41" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="900" font-size="26" fill="currentColor">9</text></svg>
+          </div>
+          <dl class="ro__rows">
+            <div><dt>Vehicle</dt><dd data-ro-vehicle>—</dd></div>
+            <div><dt>Mileage</dt><dd data-ro-miles>60,000</dd></div>
+            <div><dt>Service</dt><dd data-ro-svc>—</dd></div>
+            <div><dt>Drop-off</dt><dd data-ro-date>—</dd></div>
+            <div><dt>While you wait</dt><dd data-ro-stay>Drop-off</dd></div>
+            <div><dt>Customer</dt><dd data-ro-name>—</dd></div>
+          </dl>
+          <div class="ro__barcode" aria-hidden="true" data-barcode></div>
+          <p class="ro__fine mono">Nothing is billed without your approval. Diagnostic fee applies to repair.</p>
+        </aside>
+      </div>
+      <!-- Live scheduler (shown when SCHEDULER.url is set in script.js) -->
+      <div class="embed" data-embed hidden>
+        <iframe title="Book an appointment" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING FLOW ============ -->
+    <section class="flow section section--dark">
+      <div class="section__head">
+        <p class="section__num mono">§ 02</p>
+        <h2 class="section__title">What happens <span class="accent">after you click</span></h2>
+        <p class="section__note">Online booking is wired into the same system our techs work from, <span data-scheduler-name>Tekmetric</span>. Nobody retypes anything, so nothing gets lost.</p>
+      </div>
+      <ol class="flow__list">
+        <li><span class="mono">00:00</span><h3>On the schedule</h3><p>Your appointment lands on the shop board right away, with your vehicle and concerns attached to a repair order.</p></li>
+        <li><span class="mono">00:01</span><h3>Text confirmation</h3><p>You get a confirmation text, plus a reminder the day before. Reply to reschedule.</p></li>
+        <li><span class="mono">Drop-off</span><h3>Digital inspection</h3><p>Your tech sends photos and notes from the bay to your phone. Approve or decline each item with a tap.</p></li>
+        <li><span class="mono">Pickup</span><h3>Pay from your phone</h3><p>A text-to-pay link and your full service history, so the next visit starts where this one left off.</p></li>
+      </ol>
+    </section>
+
+  </main>
+
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="foot__mark" aria-hidden="true">BAY NINE</div>
+    <div class="foot__grid">
+      <div>
+        <p class="mono">Bay Nine Auto Works</p>
+        <p>1420 Foundry St, Riverton<br/><a href="tel:+15550192844">(555) 019-2844</a><br/><a href="mailto:service@baynine.example">service@baynine.example</a></p>
+      </div>
+      <div>
+        <p class="mono">Certified</p>
+        <p>ASE Blue Seal Shop<br/>AAA Approved Auto Repair<br/>Hybrid / EV Level 2</p>
+      </div>
+      <div>
+        <p class="mono">Explore</p>
+        <p><a href="services.html">Services &amp; prices</a><br/><a href="book.html">Book a bay</a><br/><a href="contact.html">Hours &amp; directions</a></p>
+      </div>
+      <div>
+        <p class="mono">Fine print</p>
+        <p>© <span data-year></span> Bay Nine Auto Works.<br/>Concept site. Shop, reviews &amp; prices are illustrative.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- mobile action bar -->
+  <div class="mbar">
+    <a href="tel:+15550192844" class="mbar__call">Call</a>
+    <a href="book.html" class="mbar__book">Book a bay</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
